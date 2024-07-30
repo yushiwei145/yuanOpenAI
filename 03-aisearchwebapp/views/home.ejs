@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include("./_shared/stylesheets.ejs") %>
+    <link href="/public/css/home.css" rel="stylesheet">
+    <title>Internal ChatGPT</title>
+</head>
+
+<body>
+  <div class="d-flex h-100">
+    <nav class="p-3 bg-light" style="min-width: 280px;">
+      <a href="/" class="text-decoration-none text-dark text-center d-block">
+        <span class="fs-1"><i class="fas fa-hat-wizard"></i>生命保険商品</span>
+      </a>
+      <span class="fs-1"><i class="fas"></i>AI推奨 システム</span>
+      <hr>
+    </nav>
+    <main class="flex-grow-1 bg-highlight">
+      <div class="d-flex flex-column h-100">
+        <div class="flex-grow-1 p-3 chat-history" id="divChatHistory">
+          <div class="row py-2 ai-message">
+            <div class="col-1 fs-4 text-center"><i class="fas fa-robot"></i></div>
+            <div class="col-9">
+              <pre style="white-space: pre-wrap">お客様の個人情報やニーズを入力していただければ、適切な保険商品を推奨いたします。
+例：
+性別：
+年齢：
+職業：
+健康状況：
+加入目的：
+保障内容：
+保険期間：
+商品種類：
+保障額：</pre>
+            </div>
+            <div class="col-2">
+              <a class="btn btn-outline-dark"><i class="far fa-thumbs-up"></i></a>
+              <a class="btn btn-outline-dark"><i class="far fa-thumbs-down"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 p-3 chat-input bg-white">
+          <div class="row align-self-end">
+            <form method="POST" action="#" id="frmSendMessage">
+              <div class="d-flex">
+                <input type="hidden" id="txtTopicId" name="txtTopicId" value="">
+                <div class="flex-fill mr-3">
+                  <textarea class="form-control" rows="3" id="txtMessage" name="txtMessage"></textarea>
+                </div>
+                <div class="align-self-end ms-3">
+                  <button class="btn btn-outline-primary" type="submit" id="btnSend">送信 <i
+                      class="fas fa-paper-plane"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <%- include("./_shared/scripts.ejs") %>
+    <script src="/public/js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+}
+
+.chat-history {
+  overflow-y:scroll
+}
+.chat-row {
+  display: flex;
+  margin-bottom: 1rem;;
+}
+
+.chat-item-user-icon, .chat-item-bot-icon {
+  padding: 1rem;
+  margin-right: 1rem;;
+}
+
+.chat-item-user-balloon, .chat-item-bot-balloon {
+  position: relative;
+  display: inline-block;
+  min-width: 120px;
+  max-width: 100%;
+  min-height: 60px;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1 1 auto;
+}
+
+.chat-item-user-balloon:before, .chat-item-bot-balloon:before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid;
+}
+
+.chat-item-user-balloon p, .chat-item-bot-balloon p {
+  margin: 0;
+}
+
+.chat-item-user-balloon {
+  background: #e0edff;
+}
+
+.chat-item-user-balloon:before {
+  border-right-color: #e0edff;
+}
+
+.chat-item-bot-balloon {
+  background: #f8f9fa;
+}
+
+.chat-item-bot-balloon:before {
+  border-right-color: #f8f9fa;
+}
+
+.chat-input {
+  border-top: 1px solid #dee2e6;
+}
+
+.ai-message {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.human-message {
+  border-bottom: 1px solid #dee2e6;
+}

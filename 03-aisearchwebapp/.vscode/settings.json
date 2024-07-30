@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/ae53caae-4309-4e86-afbe-5509ac5bba5d/resourceGroups/shared-service/providers/Microsoft.Web/sites/yuanwebapp0706",
+    "appService.deploySubpath": "."
+}
